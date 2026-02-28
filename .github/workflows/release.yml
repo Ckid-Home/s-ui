@@ -89,7 +89,7 @@ jobs:
           cd -
 
           ### Build s-ui
-          go build -ldflags="-w -s -linkmode external -extldflags '-static'" -tags "with_quic,with_grpc,with_utls,with_acme,with_gvisor" -o sui main.go
+          go build -ldflags="-w -s -linkmode external -extldflags '-static'" -tags "with_quic,with_grpc,with_utls,with_acme,with_gvisor,with_naive_outbound,with_musl" -o sui main.go
           file sui
           ldd sui || echo "Static binary confirmed"
 
